@@ -567,10 +567,14 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-
-#exercise_content .correct:focus{
-    color:green;
+#exercise_content .exercise_done_correct{
+    background-color: green;
 }
+
+#exercise_content .exercise_done_wrong{
+    background-color: red;
+}
+
 
 
 /* simulation */
