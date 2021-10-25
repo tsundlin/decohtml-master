@@ -11,7 +11,7 @@
     background-color: black;
     color: white;
     width: 100%;
-    height: 50px;
+    height: 40px;
 }
 
 #user_nav ul{
@@ -26,7 +26,10 @@
     margin-left: 10%;
 }
 #user_nav a{
-    font-size: x-large;
+    font-size: large;
+    padding: 1px 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
 }
 #user_nav #account a{
    text-decoration: none;
@@ -39,7 +42,7 @@
     justify-content: flex-end;
     float: left;
     background-color: black;
-    padding-right: 2%;
+    padding-right: 1%;
 }
 
 #user_nav section div{
@@ -68,8 +71,9 @@
 
 
 #main_nav{
+    margin-left: 5%;
     width: 100%;
-    font-size: 50px;
+    font-size: 60px;
     list-style: none;
 
 }
@@ -83,6 +87,9 @@
 #main_nav a{
     color: white;
     text-decoration:none;
+    font-family: 'Mate SC', serif;
+    font-weight: 800;
+    text-shadow: 5px 5px 5px rgba(0,0,0,0.8);
 }
 
 #logo{
@@ -179,6 +186,7 @@
 #footer_nav2 #footer_logo{
     margin-top: 30px;
     height: 150px;
+    margin-left: 30%;
 }
 
 #footer_nav2 #flex_content{
@@ -291,6 +299,7 @@
 }
 
 #home_content #home1 h1{
+    text-shadow: 10px 10px 5px rgba(0,0,0,0.8);
     margin-top: 10%;
     font-size: 50em;
     text-align: center;
@@ -309,6 +318,7 @@
 }
 
 #home_content #home2 div{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
     background-image: url(images/index1.jpg);
     background-size: cover;
     height: 800px;
@@ -331,6 +341,7 @@
 }
 
 #home_content #home3 div{
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.8);
     background-image: url(images/index2.jpg);
     background-size: cover;
     height: 800px;
@@ -522,35 +533,65 @@
 
 #exercise_content ul{
     margin-top: 50px;
-    margin-left: 20%;
+    margin-left: 15%;
 
 }
 
 #exercise_content ul button{
+    font-family: 'Mate SC', serif;
+    font-size: large;
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
     border-style: none;
     display: inline-block;
     margin-right: 10%;
     height: 50px;
     width: 200px;
     margin-top: 50px;
+    transition-duration: 0.4s;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 700;
+}
+#exercise_content ul button:hover{
+    color: white;
+    background-color: rgb(85, 41, 24);
 }
 
 #exercise_content h1{
+    text-shadow: 5px 5px 5px rgba(0,0,0);
+    border-radius: 5px;
     font-size: 50px;
     margin-top: 50px;
+    min-height: 150px;
+    max-width: 80%;
+    margin-left: 10%;
 }
 #exercise_content #exercise_options{
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     justify-content: center;
 }
 
 #exercise_content #exercise_options h2{
+    min-height: 50px;
+    min-width: 180px;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+    padding: 10px 5px;
+    border-radius: 5px;
     margin-right: 10%;
     margin-left: 5%;
     font-size: 20px;
-    text-decoration: underline;
     margin-top: 20px;
     cursor: pointer;
+}
+#exercise_content #exercise_options h2:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
 }
 
 #exercise_content #exercise_image_section{
@@ -560,6 +601,8 @@
 }
 
 #exercise_content #exercise_image{
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
     background-size: cover;
     width: 800px;
     height: 500px;
@@ -610,15 +653,25 @@
 
 
 #sim_content #sim_options button{
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
     margin-bottom: 50px;
     height: 40px;
     width: 300px;
     border-style: none;
     background-color: rgb(59, 55, 53);
     color: white;
+    transition-duration: 0.4s;
+}
+
+#sim_content #sim_options button:hover{
+    color: black;
+    background-color: whitesmoke;
 }
 
 #sim_content #sim_game{
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
     background-color: black;
     height: 600px;
     width: 1000px;
