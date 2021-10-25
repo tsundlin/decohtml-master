@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <title>Drive Like A Pro|Homepage</title>
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="js/account.js"></script>
+    <!--
+        <script type="text/javascript" src="js/account.js"></script>
+    
+    <script type="text/javascript" src="js/register.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    -->
+    
 	
 </head>
 <body>
     <nav id="user_nav">
         <section>
             <div id="account">
-                <h1 onclick="show_sign_window()">account</h1>
+                <h1 ><a href="login.html">account</a></h1>
+                
             </div>
-            <div id="language">
-                <h1>language</h1>
-            </div>
+            
         </section>
     </nav>
     <nav id="nav_bar">
@@ -72,21 +77,27 @@
 
         </section> 
     </div>
-  
+  <!--
     <div id="sign">
         <button id="close_button" onclick="close_sign_window()">
             X
         </button>
         <h2>Sign in</h2>
-        <form id="signin_form">
-        <input type="text" name="name" placeholder="inter e-mail address">
-        <input type="password" name="password" placeholder="inter password">
-        <input type="text" name="name1" placeholder="first name" id="reg_form1"> 
-        <input type="text" name="name2" placeholder="last name" id="reg_form2"> 
+        <form id="signin_form" action="" method="post">
+            <input type="email" name="reg_email" id="reg_email" placeholder="inter e-mail address">
+            <input type="password" name="reg_password" id="reg_password" placeholder="inter password">
+            <input type="firstname" name="reg_firstname" id="reg_firstname" placeholder="first name" > 
+            <input type="lastname" name="reg_lastname" id="reg_lastname" placeholder="last name" > 
         </form>
-        <button class="sign_button" onclick="signin_but()">Sign in</button>
-        <button class="sign_button" onclick="register_but()">Sign up</button> 
+        <button class="sign_button" id="signin_but" onclick="signin_but()">Sign in</button>
+        <button class="sign_button" id="register_but" onclick="register_but()">Sign up</button> 
+        
+        <button type="button" id="submit" class="submit">Submit</button>
+        <button type="button" id="signin" class="signin">Login</button>
     </div>
+    -->
+    
+    
     <nav id="footer_content">
         <nav id="footer_nav">
             <ul id="connect_nav">
