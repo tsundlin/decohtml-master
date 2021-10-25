@@ -64,14 +64,14 @@ function get_question(index1) {
         element.classList.remove("correct");
     }
 
-    let a = [0], b = [2,4,7] ,c = [1,5,6];
-    if(index in a){
+    let a = [0,3], b = [2,4,7] ,c = [1,5,6];
+    if(a.includes(index)){
         document.querySelector("#exercise_option1").classList.add("correct");
     }
-    else if(index in b){
+    else if(b.includes(index)){
         document.querySelector("#exercise_option2").classList.add("correct");
     }
-    else if (index in c){
+    else if (c.includes(index)){
         document.querySelector("#exercise_option3").classList.add("correct");
     }
     else{
