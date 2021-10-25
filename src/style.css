@@ -25,8 +25,12 @@
     float: left;
     margin-left: 10%;
 }
-#user_nav h1{
+#user_nav a{
     font-size: x-large;
+}
+#user_nav #account a{
+   text-decoration: none;
+   color: white;
 }
 
 #user_nav section{
@@ -82,6 +86,7 @@
 }
 
 #logo{
+    margin-left: 1%;
     width: 100px;
     height: 100px;
 }
@@ -91,6 +96,7 @@
 #login{
     margin-left: 10%;
     margin-top: 1%;
+    margin-right: 1%;
     top: 45px;
     width: 90px;
     height: 70px;
@@ -193,8 +199,6 @@
     width: 50px;
     
     float: left;
-    
-    
 }
 
 
@@ -287,6 +291,7 @@
 }
 
 #home_content #home1 h1{
+    margin-top: 10%;
     font-size: 50em;
     text-align: center;
     color: white;
@@ -300,9 +305,12 @@
 }
 #home_content #home2{
     display: flex;
+    margin-top: 5%;
 }
 
 #home_content #home2 div{
+    background-image: url(images/index1.jpg);
+    background-size: cover;
     height: 800px;
     width: 500px;
     background-color: black;
@@ -314,18 +322,21 @@
 
 #home_content #home3{
     display: flex;
+    margin-bottom: 5%;
 }
 
 #home_content #home3 h1{
-    margin-left: 5%;
+    margin-left: 10%;
     margin-top: 400px;
 }
 
 #home_content #home3 div{
+    background-image: url(images/index2.jpg);
+    background-size: cover;
     height: 800px;
     width: 500px;
     background-color: black;
-    margin-left: 350px;
+    margin-left: 500px;
     margin-top: 100px;
     border-radius: 200px;
     cursor: pointer;
@@ -506,6 +517,7 @@
 
 #exercise_content #exercise_question{
     text-align: center;
+    margin-bottom: 5%;
 }
 
 #exercise_content ul{
@@ -548,13 +560,18 @@
 }
 
 #exercise_content #exercise_image{
+    background-size: cover;
     width: 800px;
     height: 500px;
-    background-color: #73AD21;
     align-content: center;
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+#exercise_content .correct:focus{
+    color:green;
+}
+
 
 /* simulation */
 #sim_content{
