@@ -1,5 +1,8 @@
 
+
 function trainGameSelector(){
+    let upload_button =  document.getElementById("upload_button");
+    upload_button.style.visibility = "visible"
     const iframe = document.createElement("iframe");
     iframe.id = "train_game";
     iframe.src = "https://i.simmer.io/@flysilence/game4";
@@ -35,6 +38,8 @@ function trainGameSelector(){
 }
 
 function ambulanceGameSelector(){
+    let upload_button =  document.getElementById("upload_button");
+    upload_button.style.visibility = "visible"
     const iframe = document.createElement("iframe");
     
     iframe.id = "ambulance_game";
@@ -69,6 +74,8 @@ function ambulanceGameSelector(){
 }
 
 function signGameSelector(){
+    let upload_button =  document.getElementById("upload_button");
+    upload_button.style.visibility = "visible"
     const iframe = document.createElement("iframe");
     iframe.id = "sign_game";
     iframe.src = "https://i.simmer.io/@flysilence/game1"
@@ -100,6 +107,8 @@ function signGameSelector(){
 }
 
 function crossingGameSelector(){
+    let upload_button =  document.getElementById("upload_button");
+    upload_button.style.visibility = "visible"
     const iframe = document.createElement("iframe");
     iframe.id = "crossing_game";
     iframe.src = "https://i.simmer.io/@flysilence/game0"
@@ -132,6 +141,8 @@ function crossingGameSelector(){
 }
 
 function roundaboutGameSelector(){
+    let upload_button =  document.getElementById("upload_button");
+    upload_button.style.visibility = "visible"
     const iframe = document.createElement("iframe");
     iframe.id = "roundabout_game";
     iframe.src = "https://i.simmer.io/@flysilence/game3"
