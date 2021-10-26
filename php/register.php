@@ -1,11 +1,11 @@
 <?php
 
-header('content-type"text/html;charset="utf-8"');
+//header('content-type"text/html;charset="utf-8"');
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 $username = $_POST['username'];
-
+$score = 0;
 
 $link = mysqli_connect("localhost","root","","3801account");
 
@@ -43,7 +43,7 @@ if ($res->num_rows > 0){
 
 
 
-$sql1 =" INSERT INTO users(email,password,username) VALUES('{$email}','{$password}','{$username}')";
+$sql1 =" INSERT INTO users(email,password,username,score) VALUES('{$email}','{$password}','{$username}','{$score}')";
 $res1 = mysqli_query($link, $sql1);
 
 

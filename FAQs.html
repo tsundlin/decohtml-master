@@ -3,25 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Drive Like A Pro|Homepage</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
     <script type="text/javascript" src="js/account.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Pattaya&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/FAQs.js"></script>
+    <script type="text/javascript" src="js/signout.js"></script>
 	
 </head>
-<body>
+<body onload="signout()">
     <nav id="user_nav">
         <section>
-            <div id="account">
-                <a href="login.html">account</a>
+            <div id="account" style="display:block">
+                <a href="login.html">Sign in</a>
+                
             </div>
+            <div id="signout" style="display:none" onclick="logout()">
+                Sign out
+                
+            </div>
+
             
         </section>
     </nav>
     <nav id="nav_bar">
         <img src="images/logo.png" alt="logo" id="logo">
         <ul id="main_nav">
-            <li class="current">
+            <li >
                 <a href="index.html">Home</a>
             </li>
             <li>
@@ -35,7 +41,7 @@
             </li>
         </ul>
         
-        <button id="login" onclick="location.href='user.html'">
+        <button id="login" onclick="location.href='user.php'">
             
         </button>
             
@@ -45,93 +51,56 @@
     <div id="FAQs_content">
         <section id="FAQs1">
             <h1>
-                Frequently Asked Questions
+                Questions You May Have
             </h1>
             <br><br>
             <h2>
-                What should you do before applying for a learner licence?
-            </h2>
-            <br><br>
-
-            <h3>
-                <ul>
-                    <li>
-                        Before you can apply for a car (C class) learner licence, you need to complete PrepL. In order to be eligible to enrol into PrepL, you have to be at least 15 years and 11 months old. In order to apply for the car (C class) learner licence, you have to be at least 16 years old.
-                    </li>
-                </ul>
                 
-            </h3>
-            <br><br><br><br>
-
-            <h2>
-                Why is hazard perception test important?
             </h2>
             <br><br>
-            <h3>
-                <ul>
-                    <li>
-                        A hazard perception test is important because it is a tool to examine driver's ability to identify and react to hazards. Once a hazard has been identified, it is important that the driver is able to react accordingly to increase safety margin. The ability to perceive hazard is a skill that can only be gained overtime. Drivers with less driving experience is prompt to accident due to the disability to react accordingly when a hazard occurred. Therefore, hazard perception test is here to help/assist inexperienced drivers to be exposed with various hazardous environment, allowing them to be able idenfity potential hazards even way before driving on the roads.
-                    </li>
-                </ul>
-            </h3>
 
-            <br><br><br><br>
-            <h2>
-                Does this hazard perception test replaces the hazard perception test offered by the Queensland Government?
-            </h2>
-            <br><br>
-        
-            <h3>
-                <ul>
-                    <li>
-                        At the current stage, this hazard perception stage is still on an early development stage. Therefore, does not replace the hazard perception test offered by the Queensland Government. However, further trials and testing will be implemented. It plans to replace the current hazard perception test offered by the Queensland Government once the website has become more mature, and stable.
-                    </li>
-                </ul>
-            </h3>
+            <div class="popUp" onclick="popUpFunction1()"> What should you do before applying for a learner licence?
+                <span class="popUpContent" id="popUpContent1" style="display: none;" >Before you can apply for a car (C class) learner licence, you need to complete PrepL. In order to be eligible to enrol into PrepL, you have to be at least 15 years and 11 months old. In order to apply for the car (C class) learner licence, you have to be at least 16 years old.</span>
+
+            </div>
+
 
             <br><br><br><br>
 
-            <h2>
-                What is the purpose of this website?
-            </h2>
-            <br><br>
-            <h3>
-                <ul>
-                    <li>
-                        At the current stage, the purpose of this website is to help drivers improve their abilty to perceive potential hazards while on the road, through multiple simulation exercises and question exercises. 
-                    </li>
-                </ul>
-            </h3>
+            <div class="popUp" onclick="popUpFunction2()">Why is hazard perception test important?
+                <span class="popUpContent" id="popUpContent2" style="display: none;">A hazard perception test is important because it is a tool to examine driver's ability to identify and react to hazards. Once a hazard has been identified, it is important that the driver is able to react accordingly to increase safety margin. The ability to perceive hazard is a skill that can only be gained overtime. Drivers with less driving experience is prompt to accident due to the disability to react accordingly when a hazard occurred. Therefore, hazard perception test is here to help/assist inexperienced drivers to be exposed with various hazardous environment, allowing them to be able idenfity potential hazards even way before driving on the roads.</span>
+            
+            </div>
 
             <br><br><br><br>
-            <h2>
-                Do I need to have a learner licence to use the website?
-            </h2>
-            <br><br>
-            <h3>
-                <ul>
-                    <li>
-                        No. Everyone can use the website. Since inexperienced driver or drivers with no experiences (drivers who haven't obtained the learner licence yet) have little ability to percieve hazards, these are the group of people the website targets, to help them improve their abilty to perceive hazards.
-                    </li>
-                </ul>
-            </h3>
+
+            <div class="popUp" onclick="popUpFunction3()">Does this hazard perception test replaces the hazard perception test offered by the Queensland Government?
+                <span class="popUpContent" id="popUpContent3" style="display: none;">At the current stage, this hazard perception stage is still on an early development stage. Therefore, does not replace the hazard perception test offered by the Queensland Government. However, further trials and testing will be implemented. It plans to replace the current hazard perception test offered by the Queensland Government once the website has become more mature, and stable.</span>
+            </div>
+            
             <br><br><br><br>
 
-            <h2>
-                What makes this website different?
-            </h2>
-            <br><br>
-            <h3>
-                <ul>
-                    <li>
-                        This is the only hazard perception website that has simulation exercises. Simulation exercise allows users to interact with a vehicle, manoeuvre the vehicle as needed to prevent hazards. It is interactive, putting users in an actual driving environment, so that the user will be able to perceive hazards while driving in real-life. Lots of other driving perception website does not offer simulation exercise, they only offer questions or videos, which are not interactive, and is not able to immerse the user into the actual scenario. Questions are static, not dynamic, the user is able to focus 100% to identify hazards. Videos are dynamic, but since the user does not need to do anything, simply watch, the user is able to focus 100% to identify hazards. These are not realistic. But with simulation exercises, the user has to control the vehicle while identifying risks, users may not be able to focus on finding hazards completely, as they also need to control the vehicle, which creates a more realistic expericence for the users.
-                    </li>
-                </ul>
-            </h3>
-            <br><br><br><br>
-            <h2>
+            <div class="popUp" onclick="popUpFunction4()">What is the purpose of this website?
+                <span class="popUpContent" id="popUpContent4" style="display: none;">At the current stage, the purpose of this website is to help drivers improve their abilty to perceive potential hazards while on the road, through multiple simulation exercises and question exercises. </span>
+            </div>
 
-            </h2>
+
+
+            <br><br><br><br>
+
+            <div class="popUp" onclick="popUpFunction5()">Do I need to have a learner licence to use the website?
+                <span class="popUpContent" id="popUpContent5" style="display: none;">No. Everyone can use the website. Since inexperienced driver or drivers with no experiences (drivers who haven't obtained the learner licence yet) have little ability to percieve hazards, these are the group of people the website targets, to help them improve their abilty to perceive hazards. </span>
+            </div>
+            
+                        
+            <br><br><br><br>
+
+
+            <div class="popUp" onclick="popUpFunction6()">What makes this website different?
+                <span class="popUpContent" id="popUpContent6" style="display: none;">This is the only hazard perception website that has simulation exercises. Simulation exercise allows users to interact with a vehicle, manoeuvre the vehicle as needed to prevent hazards. It is interactive, putting users in an actual driving environment, so that the user will be able to perceive hazards while driving in real-life. Lots of other driving perception website does not offer simulation exercise, they only offer questions or videos, which are not interactive, and is not able to immerse the user into the actual scenario. Questions are static, not dynamic, the user is able to focus 100% to identify hazards. Videos are dynamic, but since the user does not need to do anything, simply watch, the user is able to focus 100% to identify hazards. These are not realistic. But with simulation exercises, the user has to control the vehicle while identifying risks, users may not be able to focus on finding hazards completely, as they also need to control the vehicle, which creates a more realistic expericence for the users. </span>
+            </div>
+            
+
         </section>
 
     </div>
@@ -157,7 +126,7 @@
                     <a href="Contact_us.html">Contact us</a>
                 </li>
             
-                <li>
+                <li class="current">
                     <a href="FAQs.html">FAQs</a>
                 </li>
                 

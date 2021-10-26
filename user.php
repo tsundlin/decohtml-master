@@ -2,15 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Drive Like A Pro|Simulation</title>
-    <link rel="stylesheet" href="simulation.css">
-    <script type="text/javascript" src="js/account.js"></script>
-    <script type="text/javascript" src="js/simulation.js"></script>
-    <script type="text/javascript" src="js/signout.js"></script>
-	
+    <title>Drive Like A Pro|User</title>
+    <link rel="stylesheet" href="user.css">
+
 </head>
-<body onload="signout()">
-    <nav id="user_nav">
+<body onload="checkstatus()">
+<nav id="user_nav">
         <section>
             <div id="account" style="display:block">
                 <a href="login.html">Sign in</a>
@@ -32,10 +29,10 @@
             <li>
                 <a href="index.html">Home</a>
             </li>
-            <li class="current">
+            <li>
                 <a href="simulation.html">Simulation</a>
             </li>
-            <li>
+            <li class="current">
                 <a href="exercise.html">Exercise</a>
             </li>
             <li>
@@ -49,53 +46,51 @@
             
         
     </nav>
-    <div id="sim_content">
-        <h1>
-            SELECT ACCIDENT PRONE LOCATION
-        </h1>
-        <div id="main_flex">
-            <div id="flex_box_options_and_game">
-                <section id="sim_options">
-                    <ul>
-                        <button onclick="ambulanceGameSelector()">
-                            Avoid Ambulance
-                        </button>
-                        <button onclick="signGameSelector()">
-                            Limit Sign
-                        </button>
-                        <button onclick="crossingGameSelector()">
-                            Pedestrian Crossing
-                        </button>
-                        <button onclick="roundaboutGameSelector()">
-                            Roundabout
-                        </button>
-                        <button onclick="trainGameSelector()">
-                            Train
-                        </button>
-                    </ul>
-                </section>
-    
-                <section id="sim_game"></section>
-            </div>
-        </div>
-        
 
-    </div>
-    <div id="sign">
-        <button id="close_button" onclick="close_sign_window()">
-            X
-        </button>
-        <h2>Sign in</h2>
-        <form id="signin_form">
-        <input type="text" name="name" placeholder="inter e-mail address">
-        <input type="password" name="password" placeholder="inter password">
-        <input type="text" name="name1" placeholder="first name" id="reg_form1"> 
-        <input type="text" name="name2" placeholder="last name" id="reg_form2"> 
-        </form>
-        <button class="sign_button" onclick="signin_but()">Sign in</button>
-        <button class="sign_button" onclick="register_but()">Sign up</button> 
-    </div>
-    <nav id="footer_content">
+<section class="scoreboard" id="scoreboard" style="display:none">
+    <?php
+    $link = mysqli_connect("localhost","root","","3801account");
+
+    if(!$link){
+        $respond['code']=0;
+        $respond['message']="fail to connect database";
+        echo jason_encode($respond);
+        exit;
+    }
+
+    mysqli_query($link,"set names 'utf8'");
+    $sql = "SELECT username,email FROM users";
+    $res = $link->query($sql);
+
+    if ($res->num_rows > 0){
+        //echo "<section class='scoreboard'>";
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>username</th>";
+        
+        echo "<th>email</th>";
+        echo "</tr>";   
+        while($row = $res->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['username'] . "</td>";
+            
+            echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        //echo "</section>";
+            
+    } else {
+        echo "no result";
+    }
+
+    mysqli_close($link);
+
+    ?>
+</section>
+
+
+<nav id="footer_content">
         <nav id="footer_nav">
             <ul id="connect_nav">
                 <li>
@@ -146,6 +141,13 @@
             
         </nav>
     </nav>
-    
+</nav>
+
 </body>
+
+
+<script type="text/javascript" src="js/account.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
 </html>

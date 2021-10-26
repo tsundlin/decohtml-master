@@ -66,8 +66,6 @@ function check(indexx){
 
 
 function get_question(index1) {
-    let starts = document.querySelector("#start_exercise");
-    starts.style.visibility = "hidden";
     index = index1;
     element = document.querySelector("#question_topic");
     buttons = element.getElementsByTagName("button");

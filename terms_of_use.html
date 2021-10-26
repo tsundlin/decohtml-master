@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Drive Like A Pro|About</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="term.css">
     <script type="text/javascript" src="js/account.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Pattaya&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/signout.js"></script>
 	
 </head>
-<body>
+<body onload="signout()">
     <nav id="user_nav">
         <section>
-            <div id="account">
-                <a href="login.html">account</a>
+            <div id="account" style="display:block">
+                <a href="login.html">Sign in</a>
+                
             </div>
+            <div id="signout" style="display:none" onclick="logout()">
+                Sign out
+                
+            </div>
+
             
         </section>
     </nav>
@@ -30,28 +35,27 @@
             <li>
                 <a href="exercise.html">Exercise</a>
             </li>
-            <li class="current">
+            <li >
                 <a href="about.html">About</a>
             </li>
         </ul>
         
-        <button id="login"  onclick="location.href='user.html'">
+        <button id="login"  onclick="location.href='user.php'">
             
         </button>
             
         
     </nav>
-
+    <div id="terms_of_use_box">
+        <div id="heading">
+            <h1>Terms of Use</h1>
+        </div>
+        
     <div id="terms_of_use_content">
-        <h1>
-            Terms of Use
-        </h1>
-        <h2>
-            Version 1.0
-        </h2>
+    
         <br><br>
         <p>
-            The Drive Like a Pro website located at file:///C:/Users/Bryan/Desktop/html1.2/html/index.html is a copyrighted work belonging to Drive Like a Pro. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.
+            The Drive Like a Pro website is a copyrighted work belonging to Drive Like a Pro. Certain features of the Site may be subject to additional guidelines, terms, or rules, which will be posted on the Site in connection with such features.
         </p>
         <br><br>
 
@@ -340,6 +344,7 @@
 
         
     </div>
+</div>
     <div id="sign">
         <button id="close_button" onclick="close_sign_window()">
             X
@@ -365,7 +370,7 @@
                     <a href="FAQs.html">FAQs</a>
                 </li>
                 
-                <li>
+                <li class="current">
                     <a href="terms_of_use.html">Terms of use</a>
                 </li>
                 <li>
