@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript" src="js/account.js"></script>
+    
+    <script type="text/javascript" src="js/login.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <title>login</title>
+</head>
+<body>
+<div id="home_page">
+	<h1 onclick="javascrtpt:window.location.href='index.html'">Drive Like A Pro</h1>
+</div>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<input type="name" name="reg_name" id="reg_name" placeholder="Username" />
+			<input type="email" name="reg_email" id="reg_email" placeholder="Email" />
+			<input type="password" name="reg_password" id="reg_password" placeholder="Password" />
+			<button type="button" id="register" class="register">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+
+			<input type="name" name="signin_name" id="signin_name" placeholder="Username" />
+			
+			<input type="password" name="signin_password" id="signin_password" placeholder="Password" />
+			
+			<a href="#">Forgot your password?</a>
+			<button type="button" id="signin" class="signin">Sign In</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>  
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn" onclick="sign_in()">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp" onclick="sign_up()">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

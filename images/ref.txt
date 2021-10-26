@@ -1,0 +1,34 @@
+Photo by Max Fischer from Pexels         login.jpg
+
+Photo by Pixabay from Pexels              about info image
+
+
+				about1-5 missing
+
+Photo by Steven Arenas from Pexels        sim_background
+
+Photo by Harrison Haines from Pexels      exer_background
+
+Photo by Pixabay from Pexels                      index1
+
+Photo by Taras Makarenko from Pexels              index2
+
+Photo by Cesar Perez from Pexels          home background
+
+
+/*exercise images*/
+
+Photography of Gray Sports Car · Free Stock Photo (pexels.com)        
+Gray Mercedez Benz Amg · Free Stock Photo (pexels.com)
+Red and Black Audi R8 Coupe Parked Near Gray Concrete Building · Free Stock Photo (pexels.com)
+Black Chevrolet Corvette · Free Stock Photo (pexels.com)
+Black Coupe · Free Stock Photo (pexels.com)
+Photo of Black Lamborghini · Free Stock Photo (pexels.com)
+Photo of Audi Parked near Trees · Free Stock Photo (pexels.com)
+Photo of Parked Lime Green Lamborghini · Free Stock Photo (pexels.com)
+
+
+
+
+
+Photo by ROMAN ODINTSOV from Pexels            start_exercise background
