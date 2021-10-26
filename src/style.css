@@ -686,6 +686,10 @@
     display: flex;
     justify-content: center;
 }
+#sim_content #simgame{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
 #sim_content #flex_box_options_and_game{
     display: flex;
@@ -721,15 +725,21 @@
 }
 
 #sim_content #upload_button{
+    margin-top: 50px;
     height: 2em;
     width: 8em;
     font-size: 50px;
     border-radius: 10px;
     cursor: pointer;
-    background-color:  rgb(59, 55, 53);
+    background-color:  rgb(223, 53, 23);
     box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
+    transition-duration: 0.4s;
 }
-
+#sim_content #upload_button:hover{
+    background-color: white;
+    color: black;
+}
 /*user*/
 
 
