@@ -1,13 +1,14 @@
 
 window.onload=function(){
 var register_btn = document.getElementById("register");
+let login = 0;
 
-	
+
 register_btn.addEventListener("click",function(){
 	var user_email = document.getElementById("reg_email").value;
 	var user_password = document.getElementById("reg_password").value;
     var user_name = document.getElementById("reg_name").value;
-
+	
 
 	
     
@@ -45,7 +46,7 @@ register_btn.addEventListener("click",function(){
 				} else {
 					confirm("Sign up success");
 					setTimeout(function(){
-						window.location.href = "index.html";
+						sign_in();
 					},600);
 				}
 						
@@ -92,12 +93,18 @@ login_btn.addEventListener("click",function(){
 					alert("fail to connect database");
 				} else if (res.code==1) {
 					alert("Wrong password");	
+					console.log(login);
 
 				} else {
 					confirm("Login success");
+					login=1;
 					setTimeout(function(){
 						window.location.href = "index.html";
 					},600);
+					console.log(login);
+					localStorage.setItem("username",user_name);
+					localStorage.setItem("login_status",login);
+					
 				}
 				
 				
@@ -111,5 +118,7 @@ login_btn.addEventListener("click",function(){
 
 	};
 })
+
+
 	
 }

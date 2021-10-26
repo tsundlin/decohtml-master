@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Pattaya&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/signout.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <!--
         <script type="text/javascript" src="js/account.js"></script>
     
@@ -15,14 +17,22 @@
     
 	
 </head>
-<body>
+<body onload="signout()">
     <nav id="user_nav">
         <section>
-            <div id="account">
-                <a href="login.html">account</a>
+            <div id="account" style="display:block">
+                <a href="login.html">Sign in</a>
                 
             </div>
+            <div id="signout" style="display:none" onclick="logout()">
+                Sign out
+                
+            </div>
+
+            
         </section>
+        
+        
     </nav>
     <nav id="nav_bar">
         <img src="images/logo.png" alt="logo" id="logo">
@@ -41,7 +51,7 @@
             </li>
         </ul>
         
-        <button id="login" onclick="location.href='user.html'">
+        <button id="login" onclick="location.href='user.php'">
             
         </button>
             

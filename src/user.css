@@ -26,10 +26,7 @@
     margin-left: 10%;
 }
 #user_nav a{
-    font-size: large;
-    padding: 1px 2px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    font-size: x-large;
 }
 #user_nav #account a{
    text-decoration: none;
@@ -42,6 +39,7 @@
     justify-content: flex-end;
     float: left;
     background-color: black;
+    padding-right: 2%;
 }
 
 #user_nav section div{
@@ -200,6 +198,78 @@
     float: left;
 }
 
+
+
+
+#sign{
+	width: 360px;
+	height: 500px;
+	padding: 50px 30px;
+	background: #FFF;
+	border-radius: 8px;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    z-index: 999;
+    visibility:hidden;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
+}
+
+#sign h2 {
+	font-size: 28px;
+	font-weight: 500;
+	padding-bottom: 50px;
+	text-align: center;
+	color: #333;
+}
+
+#sign input {
+	width: 340px;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	height: 55px;
+	line-height: 55px;
+	border: 0;
+	background: #f5f5f5;
+	font-size: 16px;
+	color: #666;
+}
+
+#sign .sign_button {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	width: 360px;
+	background: #1e9fff;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#sign #reg_form1, #reg_form2 {
+    visibility: hidden;
+}
+
+
+#sign #close_button {
+	position: absolute;
+    top: 30px;
+    right: 30px;
+	height: 10px;
+    width: 10px;
+	border: none;
+    font-size: 30px;
+	border-radius: 2px;
+	cursor: pointer;
+}
 
 .current{
     border-bottom: inset;
@@ -431,52 +501,6 @@
 }
 
 /* exercise */
-
-#start_exercise{
-	width: 80%;
-	height: 60%;
-	padding: 50px 30px;
-	background-image: url(images/start_exercise.jpg);
-    background-size: cover;
-    background-position: center center;
-	border-radius: 8px;
-	margin: auto;
-	position: absolute;
-	top: 5%;
-	left: 0;
-	bottom: 0;
-	right: 0;
-    z-index: 999;
-    overflow: hidden;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-}
-
-#start_exercise h2, button {
-	font-size: 80px;
-	font-weight: 800;
-	padding-bottom: 50px;
-	text-align: center;
-    color: whitesmoke;
-    text-shadow:rgba(0,0,0,0.25) 5px 5px 5px; ;
-}
-
-#start_exercise button{
-    transition-duration: 0.4s;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin-left: 35%;
-    padding: 2% 3%;
-    cursor: pointer;
-
-}
-#start_exercise button:hover{
-    color: white;
-    background-color: rgba(59, 45, 45, 0.8);
-}
-
-
 #exercise_content{
 
     width: 100%;
@@ -495,65 +519,35 @@
 
 #exercise_content ul{
     margin-top: 50px;
+    margin-left: 20%;
 
 }
 
 #exercise_content ul button{
-    font-family: 'Mate SC', serif;
-    font-size: large;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     border-style: none;
     display: inline-block;
     margin-right: 10%;
     height: 50px;
     width: 200px;
     margin-top: 50px;
-    transition-duration: 0.4s;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-weight: 700;
-}
-#exercise_content ul button:hover{
-    color: white;
-    background-color: rgb(85, 41, 24);
 }
 
 #exercise_content h1{
-    text-shadow: 5px 5px 5px rgba(0,0,0);
-    border-radius: 5px;
     font-size: 50px;
     margin-top: 50px;
-    min-height: 150px;
-    max-width: 80%;
-    margin-left: 10%;
 }
 #exercise_content #exercise_options{
-    width: 80%;
-    margin-left: 10%;
     display: flex;
     justify-content: center;
 }
 
 #exercise_content #exercise_options h2{
-    min-height: 50px;
-    min-width: 180px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-    transition-duration: 0.4s;
-    padding: 10px 5px;
-    border-radius: 5px;
     margin-right: 10%;
     margin-left: 5%;
     font-size: 20px;
     text-decoration: underline;
     margin-top: 20px;
     cursor: pointer;
-}
-#exercise_content #exercise_options h2:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
 }
 
 #exercise_content #exercise_image_section{
@@ -563,8 +557,6 @@
 }
 
 #exercise_content #exercise_image{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     background-size: cover;
     width: 800px;
     height: 500px;
@@ -606,6 +598,7 @@
 #sim_content >div{
     display: flex;
     justify-content: center;
+    margin-left: 150px;
     margin-top: 100px;
 }
 
@@ -615,25 +608,15 @@
 
 
 #sim_content #sim_options button{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     margin-bottom: 50px;
     height: 40px;
     width: 300px;
     border-style: none;
     background-color: rgb(59, 55, 53);
     color: white;
-    transition-duration: 0.4s;
-}
-
-#sim_content #sim_options button:hover{
-    color: black;
-    background-color: whitesmoke;
 }
 
 #sim_content #sim_game{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     background-color: black;
     height: 600px;
     width: 1000px;
@@ -644,26 +627,29 @@
 /*user*/
 
 
+/*user*/
 .scoreboard{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 800px;
+    background-image: url(images/user_background.jpg);
+    background-size: cover;
+    padding: 50px;
+    font-size: 200px;
+    min-height: 600px;
 }
 
-
 .scoreboard table{
+    margin-top: 10%;
     width: 50%;
     background: #ccc;
     align-content: center;
     border-collapse: collapse;
+    box-shadow: 10px 10px 5px 2px rgb(53, 49, 47);
+    margin-left: 20%;
 }
 .scoreboard th,td {
-    height: 25px;
-    line-height: 25px;
+    height: 100px;
+    line-height: 100px;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
 }
 .scoreboard th {
     background: #eee;
@@ -673,7 +659,7 @@
     background: #fff;
 }
 .scoreboard tr:hover {
-    background: #cc0;
+    background: #bebebe;
 }
 .scoreboard td a {
     color: #06f;
@@ -683,10 +669,4 @@
     color: #06f;
     text-decoration: underline;
 }
-#user_nav #signout{
-    text-decoration: none;
-    color: white;
-    font-size: x-large;
-}
-
 

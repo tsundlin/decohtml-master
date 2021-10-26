@@ -2,19 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Drive Like A Pro|About</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="js/account.js"></script>
-	
+    <title>Drive Like A Pro|User</title>
+    <link rel="stylesheet" href="user.css">
+
 </head>
-<body>
-    <nav id="user_nav">
+<body onload="checkstatus()">
+<nav id="user_nav">
         <section>
-            <div id="account">
-                <a href="login.html">account</a>
+            <div id="account" style="display:block">
+                <a href="login.html">Sign in</a>
+                
             </div>
+            <div id="signout" style="display:none" onclick="logout()">
+                Sign out
+                
+            </div>
+
             
         </section>
+        
+        
     </nav>
     <nav id="nav_bar">
         <img src="images/logo.png" alt="logo" id="logo">
@@ -25,10 +32,10 @@
             <li>
                 <a href="simulation.html">Simulation</a>
             </li>
-            <li>
+            <li class="current">
                 <a href="exercise.html">Exercise</a>
             </li>
-            <li class="current">
+            <li>
                 <a href="about.html">About</a>
             </li>
         </ul>
@@ -40,102 +47,50 @@
         
     </nav>
 
-    <div id="about_content">
-        <h1>
-            ABOUT US
-        </h1>
-        <section id="about_info1">
-            <section id="flex_left">
-                <section id="info1_left">
-                    <h1>
-                        Our project
-                    </h1>
-                    <h2>
-                        Team Full Mark Plus One
-                    </h2>
-                    <p>
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br>
-                        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx <br>
-                        xxxxxxxxxxxxxxxx
-                    </p>
-                    <button>
-                        Read more
-                    </button>
-    
-                </section>
-            </section>
-            <section id="flex_right">
-                <section id="info1_right">
-                    <!-- image -->
-    
-                </section>
-            </section>
-            
+<section class="scoreboard" id="scoreboard" style="display:none">
+    <?php
+    $link = mysqli_connect("localhost","root","","3801account");
 
-        </section>
+    if(!$link){
+        $respond['code']=0;
+        $respond['message']="fail to connect database";
+        echo jason_encode($respond);
+        exit;
+    }
 
-        <section id="info2_section">
-            <div id="about_info2">
-                <h1>
-                    Implement progress
-                </h1>
-                <div id="info2_links">
-                    <ul>
-                        <div>
-                            <img src="images/about1.png" alt="STATEMENT_OF_WORKS">
-                            <h1>
-                                STATEMENT OF WORKS
-                            </h1>
-                        </div>
-                        <div>
-                            <img src="images/about2.png" alt="WIREFRAME">
-                            <h1>
-                                WIREFRAME
-                            </h1>
-    
-                        </div>
-                        <div>
-                            <img src="images/about3.png" alt="ATHEISTIC_PROTOTYPE">
-                            <h1>
-                                ATHEISTIC PROTOTYPE
-                            </h1>
-    
-                        </div>
-                        <div>
-                            <img src="images/about4.png" alt="CODE_IMPLEMENT">
-                            <h1>
-                                CODE IMPLEMENT
-                            </h1>
-    
-                        </div>
-                        <div>
-                            <img src="images/about5.png" alt="USABILITY_EVALUATION">
-                            <h1>
-                                USABILITY EVALUATION
-                            </h1>
-    
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </section>
+    mysqli_query($link,"set names 'utf8'");
+    $sql = "SELECT username,email FROM users";
+    $res = $link->query($sql);
+
+    if ($res->num_rows > 0){
+        //echo "<section class='scoreboard'>";
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>username</th>";
         
-    </div>
-    <div id="sign">
-        <button id="close_button" onclick="close_sign_window()">
-            X
-        </button>
-        <h2>Sign in</h2>
-        <form id="signin_form">
-        <input type="text" name="name" placeholder="inter e-mail address">
-        <input type="password" name="password" placeholder="inter password">
-        <input type="text" name="name1" placeholder="first name" id="reg_form1"> 
-        <input type="text" name="name2" placeholder="last name" id="reg_form2"> 
-        </form>
-        <button class="sign_button" onclick="signin_but()">Sign in</button>
-        <button class="sign_button" onclick="register_but()">Sign up</button> 
-    </div>
-    <nav id="footer_content">
+        echo "<th>email</th>";
+        echo "</tr>";   
+        while($row = $res->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $row['username'] . "</td>";
+            
+            echo "<td>" . $row['email'] . "</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        //echo "</section>";
+            
+    } else {
+        echo "no result";
+    }
+
+    mysqli_close($link);
+
+    ?>
+</section>
+
+
+<nav id="footer_content">
         <nav id="footer_nav">
             <ul id="connect_nav">
                 <li>
@@ -186,7 +141,13 @@
             
         </nav>
     </nav>
+</nav>
 
-    
 </body>
+
+
+<script type="text/javascript" src="js/account.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+
+<script src="js/jquery-3.6.0.min.js"></script>
 </html>

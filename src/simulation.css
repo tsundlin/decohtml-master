@@ -26,10 +26,7 @@
     margin-left: 10%;
 }
 #user_nav a{
-    font-size: large;
-    padding: 1px 2px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    font-size: x-large;
 }
 #user_nav #account a{
    text-decoration: none;
@@ -42,6 +39,7 @@
     justify-content: flex-end;
     float: left;
     background-color: black;
+    padding-right: 2%;
 }
 
 #user_nav section div{
@@ -201,10 +199,95 @@
 }
 
 
+#user_nav #signout{
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    }
+
+
+
+
+
+
+
+
+
+
+#sign{
+	width: 360px;
+	height: 500px;
+	padding: 50px 30px;
+	background: #FFF;
+	border-radius: 8px;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+    z-index: 999;
+    visibility:hidden;
+    overflow: hidden;
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    border-radius: 5px;
+}
+
+#sign h2 {
+	font-size: 28px;
+	font-weight: 500;
+	padding-bottom: 50px;
+	text-align: center;
+	color: #333;
+}
+
+#sign input {
+	width: 340px;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	height: 55px;
+	line-height: 55px;
+	border: 0;
+	background: #f5f5f5;
+	font-size: 16px;
+	color: #666;
+}
+
+#sign .sign_button {
+	display: inline-block;
+	height: 50px;
+	line-height: 50px;
+	width: 360px;
+	background: #1e9fff;
+	color: #fff;
+	font-size: 16px;
+	margin-top: 20px;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#sign #reg_form1, #reg_form2 {
+    visibility: hidden;
+}
+
+
+#sign #close_button {
+	position: absolute;
+    top: 30px;
+    right: 30px;
+	height: 10px;
+    width: 10px;
+	border: none;
+    font-size: 30px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
 .current{
     border-bottom: inset;
-    background-color:rgb(14, 13, 13);
-    border-radius: 1mm;
+    background-color: rgb(85, 41, 24);
+    color: white;
 }
 
 /* home */
@@ -270,14 +353,35 @@
 }
 
 /* FAQs */
+
+#FAQs_content{
+    background-color:#f38f38;
+}
 #FAQs_content #FAQs1 h1{
     font-size: 20em;
     margin-left: 1%;
+    padding-top: 3%;
 }
 
-#FAQs_content #FAQs1 h2{
+#FAQs_content .popUp{
+    background-color:rgb(47, 177, 209);
+    height: fit-content;
+    width: fit-content;
+    -moz-border-radius-bottomright: 50px;
+    border-bottom-right-radius: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-left-radius: 50px;
+    -moz-border-radius-topleft: 50px;
+    border-top-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    border-top-left-radius: 50px;
     font-size: 10em;
-    margin-left: 1%;
+    margin-left: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    color: white;
 }
 
 #FAQs_content #FAQs1 h3 ul li{
@@ -285,12 +389,94 @@
     margin-left: 2%;
 }
 
+.popUp{
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+
+.popUp .popUpContent{
+    width: 90%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 20%;
+    margin-left: -80px;
+    
+}
+
+.popUp .popUpContent::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.popUp .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn{
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 /* terms of use */
+
+#terms_of_use_box{
+    display: flex;
+    justify-content: center;
+    background-image: url(images/home.png);
+    flex-wrap: wrap;
+}
+
+#terms_of_use_box #heading{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    color: white;
+    flex-wrap: wrap;
+    font-size: 20em;
+    margin-left: 15%;
+}
 #terms_of_use_content{
     height: auto;
-    width: 100%;
+    width: 70%;
     overflow:hidden;
     list-style: circle;
+    background-color: #666;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    -moz-border-radius-bottomright: 50px;
+    border-bottom-right-radius: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-bottom-left-radius: 50px;
+    -moz-border-radius-topleft: 50px;
+    border-top-right-radius: 50px;
+    -moz-border-radius-topright: 50px;
+    border-top-left-radius: 50px;
+    padding-top: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    color: whitesmoke;
 }
 
 #terms_of_use_content h1{
@@ -431,52 +617,6 @@
 }
 
 /* exercise */
-
-#start_exercise{
-	width: 80%;
-	height: 60%;
-	padding: 50px 30px;
-	background-image: url(images/start_exercise.jpg);
-    background-size: cover;
-    background-position: center center;
-	border-radius: 8px;
-	margin: auto;
-	position: absolute;
-	top: 5%;
-	left: 0;
-	bottom: 0;
-	right: 0;
-    z-index: 999;
-    overflow: hidden;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-}
-
-#start_exercise h2, button {
-	font-size: 80px;
-	font-weight: 800;
-	padding-bottom: 50px;
-	text-align: center;
-    color: whitesmoke;
-    text-shadow:rgba(0,0,0,0.25) 5px 5px 5px; ;
-}
-
-#start_exercise button{
-    transition-duration: 0.4s;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 10px;
-    margin-left: 35%;
-    padding: 2% 3%;
-    cursor: pointer;
-
-}
-#start_exercise button:hover{
-    color: white;
-    background-color: rgba(59, 45, 45, 0.8);
-}
-
-
 #exercise_content{
 
     width: 100%;
@@ -495,65 +635,35 @@
 
 #exercise_content ul{
     margin-top: 50px;
+    margin-left: 20%;
 
 }
 
 #exercise_content ul button{
-    font-family: 'Mate SC', serif;
-    font-size: large;
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     border-style: none;
     display: inline-block;
     margin-right: 10%;
     height: 50px;
     width: 200px;
     margin-top: 50px;
-    transition-duration: 0.4s;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-weight: 700;
-}
-#exercise_content ul button:hover{
-    color: white;
-    background-color: rgb(85, 41, 24);
 }
 
 #exercise_content h1{
-    text-shadow: 5px 5px 5px rgba(0,0,0);
-    border-radius: 5px;
     font-size: 50px;
     margin-top: 50px;
-    min-height: 150px;
-    max-width: 80%;
-    margin-left: 10%;
 }
 #exercise_content #exercise_options{
-    width: 80%;
-    margin-left: 10%;
     display: flex;
     justify-content: center;
 }
 
 #exercise_content #exercise_options h2{
-    min-height: 50px;
-    min-width: 180px;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-    transition-duration: 0.4s;
-    padding: 10px 5px;
-    border-radius: 5px;
     margin-right: 10%;
     margin-left: 5%;
     font-size: 20px;
     text-decoration: underline;
     margin-top: 20px;
     cursor: pointer;
-}
-#exercise_content #exercise_options h2:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
 }
 
 #exercise_content #exercise_image_section{
@@ -563,8 +673,6 @@
 }
 
 #exercise_content #exercise_image{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
     background-size: cover;
     width: 800px;
     height: 500px;
@@ -603,48 +711,42 @@
     flex-wrap: nowrap;
 }
 
-#sim_content >div{
+#sim_content #main_flex{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+}
+
+#sim_content #flex_box_options_and_game{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 3%;
+    padding-top: 2%;
 }
 
 #sim_content #sim_options{
-    writing-mode: vertical-lr;
+    width: 100%;
 }
 
-
 #sim_content #sim_options button{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
+    font-size: 30em;
     margin-bottom: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
     height: 40px;
-    width: 300px;
+    width: 100%;
     border-style: none;
     background-color: rgb(59, 55, 53);
     color: white;
-    transition-duration: 0.4s;
+    box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#sim_content #sim_options button:hover{
-    color: black;
-    background-color: whitesmoke;
-}
-
-#sim_content #sim_game{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-    background-color: black;
-    height: 600px;
-    width: 1000px;
-    margin-left: 200px;
-    border-radius: 50px;
-}
 
 /*user*/
 
 
-.scoreboard{
+#user_content{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -653,40 +755,35 @@
 }
 
 
-.scoreboard table{
+#user_content table{
     width: 50%;
     background: #ccc;
     align-content: center;
     border-collapse: collapse;
 }
-.scoreboard th,td {
+#user_content th,td {
     height: 25px;
     line-height: 25px;
     text-align: center;
     border: 1px solid #ccc;
 }
-.scoreboard th {
+#user_content th {
     background: #eee;
     font-weight: normal;
 }
-.scoreboard tr {
+#user_content tr {
     background: #fff;
 }
-.scoreboard tr:hover {
+#user_content tr:hover {
     background: #cc0;
 }
-.scoreboard td a {
+#user_content td a {
     color: #06f;
     text-decoration: none;
 }
-.scoreboard td a:hover {
+#user_content td a:hover {
     color: #06f;
     text-decoration: underline;
-}
-#user_nav #signout{
-    text-decoration: none;
-    color: white;
-    font-size: x-large;
 }
 
 
