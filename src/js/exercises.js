@@ -1,5 +1,4 @@
 var mark = 0;
-var username=localStorage.getItem("username");
 
 const questions = "When passing through pedestrian crossing, what is the correct precautionary action to be done to reduce risk?!Slow down! accelerate! make a complete stop! maintain current speed&.Driving in a crowded area, which is the most important hazard to be looked out for!Vehicles! traffic lights! pedestrians! traffic signs&. If you receive a phone call while driving, what should you do?!Pick up the phone and answer the call! stop the car in a safe place then pick up the call! look at the phone and press the hang up button! text the person instead&.When you are travelling through a merge lane, what's the right action to merge safely?!Maintain speed and adjust as needed! accelerate! reduce speed! make a complete stop&.In a round about, when should you give way?!When there is a car to your left! when there is a car to your right! when there is no car! when there a pedestrian waiting&.When driving in a completely dark night, when is the correct time to turn on high beams?!When there is a car ahead! when there is a car coming from the opposite direction! when there are no cars around you! whenever you want&. There is a car with extremely bright lights travelling from the opposing lane, what should you do?! Look at the lights! do no action! try to avoid the lights by avoiding direct contact! close your eyes&.If there is an ambulance behind you, with the siren on. You are waiting for the traffic lights to turn green. What's the correct action?!Wait for the lights to turn green then give way to the ambulance! go through the traffic lights regardless to give way to the ambulance! do nothing! reverse the vehicle to give way even though you may crash into other traffic ";
 var q_list = questions.split("&.");
@@ -28,33 +27,7 @@ function check(indexx){
         question_done[index] = 1;
     }  
     if(!(question_done.includes(0))){
-        alert("You have all 8 exercise done! \nYou have " + mark + " marks");
-        console.log(mark);
-        console.log(username);
-        $.ajax({
-			method: "post",
-			url : "php/score.php",
-			data : {
-				score : mark,
-                username : username,
-                
-			},
-			success : function(result){
-				var res = JSON.parse(result);
-				if (res.code==0){
-					alert("fail to connect database");
-				} else {
-					confirm("load success");
-					setTimeout(function(){
-						window.location.href = "index.html";
-					},600);
-				}
-						
-			},
-			error : function(msg){
-				console.log(msg);
-			}
-		})
+        alert("You have all 8 exercise done! \nYou have " + mark + " marks")
     }
     else{
         index = (index < 7 && question_done[index+1] ==0) ? index+1 :question_done.findIndex(item => item === 0);
@@ -66,6 +39,8 @@ function check(indexx){
 
 
 function get_question(index1) {
+    let starts = document.querySelector("#start_exercise");
+    starts.style.visibility = "hidden";
     index = index1;
     element = document.querySelector("#question_topic");
     buttons = element.getElementsByTagName("button");

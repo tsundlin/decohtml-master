@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Drive Like A Pro|User</title>
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body onload="checkstatus()">
