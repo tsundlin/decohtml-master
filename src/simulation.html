@@ -5,18 +5,26 @@
     <title>Drive Like A Pro|Simulation</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="js/account.js"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Pattaya&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="js/simulation.js"></script>
+    <script type="text/javascript" src="js/signout.js"></script>
 	
 </head>
-<body>
+<body onload="signout()">
     <nav id="user_nav">
         <section>
-            <div id="account">
+            <div id="account" style="display:block">
                 <a href="login.html">Sign in</a>
+                
             </div>
+            <div id="signout" style="display:none" onclick="logout()">
+                Sign out
+                
+            </div>
+
             
         </section>
+        
+        
     </nav>
     <nav id="nav_bar">
         <img src="images/logo.png" alt="logo" id="logo">
@@ -35,7 +43,7 @@
             </li>
         </ul>
         
-        <button id="login"  onclick="location.href='user.html'">
+        <button id="login"  onclick="location.href='user.php'">
             
         </button>
             
@@ -45,40 +53,35 @@
         <h1>
             SELECT ACCIDENT PRONE LOCATION
         </h1>
-        <div>
-            <section id="sim_options">
-                <ul>
-                    <button>
-                        Acceleration
-                    </button>
-                    <button>
-                        In reverse
-                    </button>
-                    <button>
-                        School Zone
-                    </button>
-                    <button>
-                        One Way Street
-                    </button>
-                    <button>
-                        Double Yellow Line
-                    </button>
-                    <button>
-                        Change Line
-                    </button>
-                    <button>
-                        Parking
-                    </button>
-                </ul>
-            </section>
-
-            <section id="sim_game">
-                
-            </section>
+        <div id="main_flex">
+            <div id="flex_box_options_and_game">
+                <section id="sim_options">
+                    <ul>
+                        <button onclick="ambulanceGameSelector()">
+                            Avoid Ambulance
+                        </button>
+                        <button onclick="signGameSelector()">
+                            Limit Sign
+                        </button>
+                        <button onclick="crossingGameSelector()">
+                            Pedestrian Crossing
+                        </button>
+                        <button onclick="roundaboutGameSelector()">
+                            Roundabout
+                        </button>
+                        <button onclick="trainGameSelector()">
+                            Train
+                        </button>
+                    </ul>
+                </section>
+    
+                <section id="sim_game"></section>
+            </div>
         </div>
+        
 
     </div>
-    
+
     <nav id="footer_content">
         <nav id="footer_nav">
             <ul id="connect_nav">

@@ -654,7 +654,7 @@
 
 
 
-/* simulation */
+//* simulation */
 #sim_content{
     width: 100%;
     overflow:hidden;
@@ -675,42 +675,35 @@
     flex-wrap: nowrap;
 }
 
-#sim_content >div{
+#sim_content #main_flex{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+}
+
+#sim_content #flex_box_options_and_game{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 3%;
+    padding-top: 2%;
 }
 
 #sim_content #sim_options{
-    writing-mode: vertical-lr;
+    width: 100%;
 }
 
-
 #sim_content #sim_options button{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
+    font-size: 30em;
     margin-bottom: 50px;
+    margin-right: 5%;
+    margin-left: 5%;
     height: 40px;
-    width: 300px;
+    width: 100%;
     border-style: none;
     background-color: rgb(59, 55, 53);
     color: white;
-    transition-duration: 0.4s;
-}
-
-#sim_content #sim_options button:hover{
-    color: black;
-    background-color: whitesmoke;
-}
-
-#sim_content #sim_game{
-    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
-    border-radius: 5px;
-    background-color: black;
-    height: 600px;
-    width: 1000px;
-    margin-left: 200px;
-    border-radius: 50px;
+    box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*user*/
