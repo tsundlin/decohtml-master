@@ -5,6 +5,8 @@
     <title>Drive Like A Pro|Contact_us</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="js/signout.js"></script>
+    <script type="text/javascript" src="js/submit.js"></script>
+
     
 	
 </head>
@@ -49,7 +51,7 @@
             
         
     </nav>
-    <form action="action_page.php">
+    <form action="index.html">
 
         <div class="contact_us_con">
             <label for="fname">First Name</label>
@@ -61,7 +63,7 @@
             
             <label for="subject">message box</label>
             <textarea id="subject" name="subject" placeholder="comments here" style="height:200px"></textarea>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="upload()">
 
         </div>
 
@@ -84,9 +86,7 @@
                 <li>
                     <a href="terms_of_use.html">Terms of use</a>
                 </li>
-                <li>
-                    <a href="Help.html">Help</a>
-                </li>
+ 
             </ul>
             <p id="team_info">
                 2021 BY TEAM FULL MARK PLUS ONE - DECO3801

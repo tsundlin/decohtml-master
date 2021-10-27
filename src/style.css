@@ -32,6 +32,7 @@
 #user_nav #account a{
    text-decoration: none;
    color: white;
+   font-size: x-large
 }
 
 #user_nav section{
@@ -514,13 +515,13 @@
 	width: 80%;
 	height: 60%;
 	padding: 50px 30px;
-	background-image: url(images/start_exercise.jpg);
+	background-image: url(images/notlogin.jpg);
     background-size: cover;
     background-position: center center;
 	border-radius: 8px;
 	margin: auto;
 	position: absolute;
-	top: 5%;
+	top: 20%;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -535,7 +536,7 @@
 	font-weight: 800;
 	padding-bottom: 50px;
 	text-align: center;
-    color: whitesmoke;
+    color: wheat;
     text-shadow:rgba(0,0,0,0.25) 5px 5px 5px; ;
 }
 
@@ -584,14 +585,15 @@
     border-radius: 5px;
     border-style: none;
     display: inline-block;
-    margin-right: 10%;
+    margin-right: 5%;
     height: 50px;
     width: 200px;
     margin-top: 50px;
     transition-duration: 0.4s;
     background-color: rgba(255, 255, 255, 0.2);
-    color: white;
+    color: black;
     font-weight: 700;
+    cursor: pointer;
 }
 #exercise_content ul button:hover{
     color: white;
@@ -609,7 +611,7 @@
 }
 #exercise_content #exercise_options{
     width: 80%;
-    margin-left: 10%;
+    margin-left: 12%;
     display: flex;
     justify-content: center;
 }
@@ -628,10 +630,11 @@
     font-size: 20px;
     margin-top: 20px;
     cursor: pointer;
+    color: black;
 }
 #exercise_content #exercise_options h2:hover{
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
+    color: white;
+    background-color: rgb(85, 41, 24);
 }
 
 #exercise_content #exercise_image_section{
@@ -666,8 +669,10 @@
     overflow:hidden;
     background-image: url(images/sim_background.jpg);
     background-size:cover;
-    color: white;
+    color: cornsilk;
     min-height: 800px;
+    
+
 }
 
 #sim_content > h1{
@@ -704,24 +709,31 @@
 }
 
 #sim_content #sim_options button{
+    font-family: 'Mate SC', serif;
     font-size: 30em;
+    font-weight: bold;
     margin-bottom: 50px;
     margin-right: 5%;
     margin-left: 5%;
     height: 40px;
     width: 100%;
-    border-style: none;
-    background-color: rgb(59, 55, 53);
+    border-style:outset;
+    background-color: rgba(255, 255, 255, 0.2);
     color: white;
-    box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
     cursor: pointer;
     transition-duration: 0.4s;
     border-radius: 5px;
+    display: inline-block;
 }
 #sim_content #sim_options button:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
+
+
+
+
 
 #sim_content #upload_button , #sim_content #start_sim{
     margin-top: 50px;
@@ -735,11 +747,10 @@
     color: white;
     transition-duration: 0.4s;
     visibility:hidden;
-    margin: 0 30%;
 }
 #sim_content #upload_button:hover, #sim_content #start_sim:hover{
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 #sim_content #start_sim{
@@ -830,16 +841,19 @@ input[type=submit]:hover {
 /* FAQs */
 
 #FAQs_content{
-    background-color:#f38f38;
+    background-image: url(images/notlogin.jpg);
+    background-size: cover;
+    
 }
 #FAQs_content #FAQs1 h1{
     font-size: 20em;
     margin-left: 1%;
     padding-top: 3%;
+    color: white;
 }
 
 #FAQs_content .popUp{
-    background-color:rgb(47, 177, 209);
+    
     height: fit-content;
     width: fit-content;
     -moz-border-radius-bottomright: 50px;
@@ -856,7 +870,14 @@ input[type=submit]:hover {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 2%;
-    color: white;
+    color: wheat;
+    font-weight: bold;
+    box-shadow: 10px 10px 5px 2px rgb(53, 49, 47);
+    background-color:rgba(255, 255, 255, 0.2);;
+}
+
+#FAQs_content .popUp:hover{
+    background-color: black;
 }
 
 #FAQs_content #FAQs1 h3 ul li{
@@ -870,6 +891,7 @@ input[type=submit]:hover {
     cursor: pointer;
     margin-bottom: 2%;
 }
+
 
 .popUp .popUpContent{
     width: 90%;
@@ -986,8 +1008,8 @@ input[type=submit]:hover {
 }
 
 .scoreboard table{
-    margin-top: 10%;
-    width: 50%;
+    margin-top: 2%;
+    width: 60%;
     background: #ccc;
     align-content: center;
     border-collapse: collapse;
@@ -1019,3 +1041,46 @@ input[type=submit]:hover {
     text-decoration: underline;
 }
 
+
+.nologin{
+    background-image: url(images/user_background.jpg);
+    background-size: cover;
+    
+}
+#leaderboard{
+    
+    font-size: 20em;
+    text-align: center;
+}
+
+#alertlogin{
+    font-family: 'Mate SC', serif;
+    font-size: 10em;
+    margin-top: 100px;
+    margin-bottom: 10;
+    text-align: center;
+    
+}
+
+.gotologin{
+    
+    font-size: 5em;
+    margin-bottom: 180px;
+    margin-right: 5%;
+    margin-left: 47%;
+    
+    border-style:outset;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: black;
+    box-shadow: rgba(0,0,0,0.25) 10px 10px 5px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#loginleaderboard{
+    font-family: 'Mate SC', serif;
+    font-size: 0.5em;
+    text-align: center;
+}
