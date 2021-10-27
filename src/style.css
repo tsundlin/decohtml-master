@@ -668,7 +668,6 @@
     background-size:cover;
     color: white;
     min-height: 800px;
-
 }
 
 #sim_content > h1{
@@ -686,7 +685,7 @@
     display: flex;
     justify-content: center;
 }
-#sim_content #simgame{
+#sim_content #sim_game{
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -724,22 +723,27 @@
     color: black;
 }
 
-#sim_content #upload_button{
+#sim_content #upload_button , #sim_content #start_sim{
     margin-top: 50px;
     height: 2em;
     width: 8em;
     font-size: 50px;
     border-radius: 10px;
     cursor: pointer;
-    background-color:  rgb(223, 53, 23);
+    background-color:rgba(255, 255, 255, 0.2);;
     box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
     transition-duration: 0.4s;
     visibility:hidden;
+    margin: 0 30%;
 }
-#sim_content #upload_button:hover{
+#sim_content #upload_button:hover, #sim_content #start_sim:hover{
     background-color: white;
     color: black;
+}
+
+#sim_content #start_sim{
+    visibility:visible;
 }
 /*user*/
 
