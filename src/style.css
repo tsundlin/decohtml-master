@@ -271,6 +271,7 @@
 #home_content #home3 h1{
     margin-left: 10%;
     margin-top: 400px;
+    max-width: 40%;
 }
 
 #home_content #home3 div{
@@ -280,7 +281,7 @@
     height: 800px;
     width: 500px;
     background-color: black;
-    margin-left: 500px;
+    margin-left: 200px;
     margin-top: 100px;
     border-radius: 200px;
     cursor: pointer;
@@ -350,9 +351,11 @@
 }
 
 #about_content #about_info1{
+    max-height: 1000px;
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-bottom: 400px;
     
 }
 
@@ -362,11 +365,10 @@
 }
 
 #about_content #flex_right{
-    display: flex;
     width: 50%;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 0;
 }
 
 
@@ -406,13 +408,15 @@
     border-style: none;
 }
 
-#about_content #info1_right{
-    background-image: url(images/about_info1.jpg);
-    background-size: contain;
-    height: 500px;
-    width: 100%;
-    background-repeat: no-repeat;
-
+#about_content #info1_right img{
+    margin-left: 50px;
+    max-height: 500px;
+    margin-top: 5%;
+}
+#about_content #info1_right #about_image2{
+    margin-left: 20%;
+    margin-top: 10%;
+    max-height: 700px;
 }
 
 #about_content #about_info2{
@@ -443,13 +447,13 @@
     width: 200px;
     margin-right: 100px;
     margin-top: 100px;
-    margin-left: 10px;
+    margin-left: 70px;
 }
 
 #about_content #about_info2 ul div >img{
     background-color: black;
-    height: 100px;
-    width: 150px;
+    height: 180px;
+    width: 300px;
     margin-bottom: 10px;
 }
 
@@ -710,8 +714,8 @@
 
 #sim_content #sim_options button{
     font-family: 'Mate SC', serif;
-    font-size: 30em;
-    font-weight: bold;
+    font-size: 40em;
+    font-weight: 800;
     margin-bottom: 50px;
     margin-right: 5%;
     margin-left: 5%;
@@ -742,11 +746,13 @@
     font-size: 50px;
     border-radius: 10px;
     cursor: pointer;
-    background-color:rgba(255, 255, 255, 0.2);;
+    background-color:rgba(255, 255, 255, 0.2);
     box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: white;
     transition-duration: 0.4s;
     visibility:hidden;
+    margin-left: 40%;
+    margin-right: 40%;
 }
 #sim_content #upload_button:hover, #sim_content #start_sim:hover{
     background-color: black;
@@ -755,6 +761,23 @@
 
 #sim_content #start_sim{
     visibility:visible;
+}
+
+#sim_content #sim_info{
+    margin-top: 3%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0.4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+#sim_content #sim_info h1, #sim_content #sim_info h2{
+    margin-top: 3%;
+    padding: 20px 20px;
+    font-size: xx-large;
+    color: white;
+}
+#sim_content #sim_info h2{
+    padding: 20px 50px;
 }
 /*user*/
 
@@ -800,7 +823,11 @@
 }
 
 /*contect us*/
-
+#contact_us_h1{
+    color: white;
+    font-size: 5em;
+    display: flex;
+}
 .contact_us_con {
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -986,7 +1013,7 @@ input[type=submit]:hover {
 }
 
 #terms_of_use_content p{
-    font-size: 5em;
+    font-size: 8em;
     margin-left: 2%;
 }
 
