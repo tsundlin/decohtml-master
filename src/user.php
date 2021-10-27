@@ -120,7 +120,7 @@
         <nav id="footer_nav">
             <ul id="connect_nav">
                 <li>
-                    <a href="Contact_us.html">Contact us</a>
+                    <a href="contact_us.html">Contact us</a>
                 </li>
             
                 <li>
