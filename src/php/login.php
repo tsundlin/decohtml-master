@@ -7,7 +7,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 
-$link = mysqli_connect("localhost","root","","3801account");
+$link = mysqli_connect("mysql","php","php","cloud_computing");
 
 if(!$link){
     $respond['code']=0;

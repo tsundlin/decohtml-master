@@ -70,7 +70,7 @@
 
 <section class="scoreboard" id="scoreboard" style="display:none">
     <?php
-    $link = mysqli_connect("localhost","root","","3801account");
+    $link = mysqli_connect("mysql","php","php","cloud_computing");
 
     if(!$link){
         $respond['code']=0;
