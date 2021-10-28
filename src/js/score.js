@@ -1,5 +1,7 @@
-var score = 5;
-var username=localStorage.getItem("username");
+var mark =localStorage.getItem("score");
+
+var score = parseInt(mark) + 2;
+var username=localStorage.getItem("username"); //get current user's information
 
 function upload(){
     $.ajax({
@@ -11,7 +13,7 @@ function upload(){
             
         },
         success : function(result){
-            var res = JSON.parse(result);
+            var res = JSON.parse(result); //get result back from php
             if (res.code==0){
                 alert("fail to connect database");
             } else {
@@ -19,6 +21,7 @@ function upload(){
                 setTimeout(function(){
                     window.location.href = "simulation.html";
                 },600);
+                localStorage.setItem("score",score);
             }
                     
         },

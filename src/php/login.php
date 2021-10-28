@@ -23,7 +23,7 @@ mysqli_query($link,"set names 'utf8'");
 $sql1 ="SELECT * FROM users WHERE username='{$username}' AND password='{$password}'";
 $res1 = $link->query($sql1);
 
-
+//compare the password stored in database
 if ($res1->num_rows == 0){
     $respond['code'] = 1 ;
     $respond['message']="wrong password";
@@ -31,6 +31,7 @@ if ($res1->num_rows == 0){
     exit;
 
 }else{
+    
     $respond['code']=2;
     $respond['message']="login success";
     echo json_encode($respond);

@@ -22,6 +22,7 @@ mysqli_query($link,"set names 'utf8'");
 $sql2 = "SELECT * FROM users WHERE username= '{$username}'";
 $res2 = $link->query($sql2);
 
+//check existing username
 if ($res2->num_rows > 0){
     $respond['code']=4;
     $respond['message']="Username exists";
@@ -33,6 +34,8 @@ if ($res2->num_rows > 0){
 $sql = "SELECT * FROM users WHERE email= '{$email}'";
 $res = $link->query($sql);
 
+
+//check existing email
 if ($res->num_rows > 0){
     $respond['code']=1;
     $respond['message']="Email is aleady registered";
@@ -42,7 +45,7 @@ if ($res->num_rows > 0){
 
 
 
-
+//insert new data into database
 $sql1 =" INSERT INTO users(email,password,username,score) VALUES('{$email}','{$password}','{$username}','{$score}')";
 $res1 = mysqli_query($link, $sql1);
 

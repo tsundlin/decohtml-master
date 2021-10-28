@@ -1,7 +1,7 @@
 
 window.onload=function(){
 var register_btn = document.getElementById("register");
-let login = 0;
+let login = 0; // login status default is 0
 
 
 register_btn.addEventListener("click",function(){
@@ -12,7 +12,7 @@ register_btn.addEventListener("click",function(){
 
 	
     
-	
+	//detect empty input
 	if(user_name.length == 0 ){
 		alert("Please enter a username!");
 	}
@@ -36,13 +36,13 @@ register_btn.addEventListener("click",function(){
                 
 			},
 			success : function(result){
-				var res = JSON.parse(result);
+				var res = JSON.parse(result); //get result back from php
 				if (res.code==0){
 					alert("fail to connect database");
 				} else if (res.code==4) {
 					alert("Username exists");	
 				} else if (res.code==1){
-					alert("Email is already registered");
+					alert("Email is already registered"); 
 				} else {
 					confirm("Sign up success");
 					setTimeout(function(){
@@ -70,7 +70,7 @@ login_btn.addEventListener("click",function(){
 	var user_password = document.getElementById("signin_password").value;
 	
 	
-	
+	//detect empty input
 	if(user_name.length == 0){
 		alert("Please enter a username!");
 	}
@@ -97,11 +97,12 @@ login_btn.addEventListener("click",function(){
 
 				} else {
 					confirm("Login success");
-					login=1;
+					login=1; //login status set to 1
 					setTimeout(function(){
 						window.location.href = "index.html";
 					},600);
 					console.log(login);
+					//store the login in information to local when login success
 					localStorage.setItem("username",user_name);
 					localStorage.setItem("login_status",login);
 					

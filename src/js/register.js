@@ -40,9 +40,9 @@ register_btn.addEventListener("click",function(){
 				if (res.code==0){
 					alert("fail to connect database");
 				} else if (res.code==1) {
-					alert("username exists hahaha");	
+					alert("username exists");	
 				} else {
-					confirm("sign up success hahaha");
+					confirm("sign up success");
 				}
 						
 			},

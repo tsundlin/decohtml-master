@@ -82,6 +82,7 @@
     }
 
     mysqli_query($link,"set names 'utf8'");
+    //get user's information and ordered by score
     $sql = "SELECT username,score FROM users ORDER BY score DESC";
     $res = $link->query($sql);
 

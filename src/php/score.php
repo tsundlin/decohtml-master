@@ -20,14 +20,15 @@ mysqli_query($link,"set names 'utf8'");
 
 
 
-
+//get user's score
 $sql1 ="UPDATE users set score='{$score}' WHERE username='{$username}'";
 $res1 = $link->query($sql1);
 
 
 if ($res1== 0){
     $respond['code'] = 1 ;
-    $respond['message']="no update";
+    
+    $respond['message']="no update"; //if user does not exists
     echo json_encode($respond);
     exit;
 
